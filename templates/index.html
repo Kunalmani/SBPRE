@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Recommendation API</title>
+</head>
+
+<body style="background-color:green;">
+    <div class="login">
+        <h1>Sentiment Based Product Recommendation Engine</h1>
+        <h4>Products recomendations for users</h4>
+        <br>
+        <form action="{{ url_for('predict')}}" method="post">
+            <p style="font-size:20px;color:yellow">Enter the user name: </p> 
+            <input type="text" name="userName" placeholder="e.g Anne" required="required" />
+            <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+        </form>
+
+        <br>
+        <br>
+        <b>{{prediction_label}}</b>
+        <br>
+        <br>
+        {{prediction_text0}}
+        <br>
+        {{prediction_text1}}
+        <br>
+        {{prediction_text2}}
+        <br>
+        {{prediction_text3}}
+        <br>
+        {{prediction_text4}}
+        <br>
+        <br>
+        <h6>(Project developer : Kunal Mani, PostGraduate AIML , UPGRAD & IIIT)</h6>
+    </div>
+</body>
+
+</html>
